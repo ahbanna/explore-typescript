@@ -20,4 +20,21 @@
   });
 
   //
+  const addStudent = <T>(student: T) => {
+    const course = "Next level web development";
+    return {
+      ...student,
+      course,
+    };
+  };
+  const std1 = addStudent({
+    name: "Banna",
+    email: "banna@gmail.com",
+    status: "graduate",
+  });
+  const std2 = addStudent({
+    name: "Tutul",
+    email: "tutul@gmail.com",
+    position: "Front end developer",
+  });
 }
