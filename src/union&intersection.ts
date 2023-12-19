@@ -1,6 +1,21 @@
 {
-  // Union
+  // ---------------   Union  ---------------------
   // Example: 1
+  let userId: string | number;
+  userId = "banna5800"; // valid
+  userId = 5800; // valid
+  // userId = true         // not valid
+
+  // Example: 2
+  function userInfo(userId: string | number) {
+    console.log(userId);
+  }
+  userInfo("banna5800");  // valid
+  userInfo(10);           // valid
+  // userInfo(true);         // not valid
+
+
+  // Example: 3
   type Student = {
     name: string;
     gender: "male" | "female";
@@ -9,12 +24,12 @@
     name: "Hasan",
     gender: "male",
   };
-  // Example: 2
+  // Example: 4
   type Gender = "male" | "female";
   type MaritalStatus = "married" | "unmarried";
   type Status = Gender | MaritalStatus;
 
-  // Intersection
+  // --------------------- Intersection --------------------
   type FrontendDeveloper = {
     skills: string[];
     frontendDesignation: "frontend developer";
