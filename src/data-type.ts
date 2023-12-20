@@ -71,3 +71,9 @@ enum Direction3 {
   Count = 10,
 }
 console.log(Direction3.Count); // 10
+
+// Any
+let variable: any;
+variable = 10; // Works fine, assigning a number
+variable = "Hello"; // Also works, assigning a string
+variable = true; // Works, assigning a boolean
